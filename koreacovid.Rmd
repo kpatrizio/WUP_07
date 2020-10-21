@@ -23,9 +23,9 @@ Some of the data was uncoded for sex - sex must be just male or female
 state of a patient must be died or alive - we adjust that as well   
   
 # Question 1 - Is dying independent of sex
+$H_0$ The Null Hypothesis is that there is no relationship between dying and the sex of the infected.  
 
-
-
+$H_A$ The Alternative Hypothesis is that there is a relationship between dying and the sex of the infected.  
 
 Table of patients:
 ```{r}
@@ -40,12 +40,17 @@ with(kRdata, table(Sex, result))
 
 ```{r}
 barchartGC(~result + Sex,data=kRdata,main="frequency Bar Chart")
+```
+
+  
+### this bar chart is displaying in total frequency terms our data.  Clearly there are a lot less dead people than alive people as is reflected by the sizes of the bars in the display. 
+
+```{r}
 barchartGC(~result + Sex,data=kRdata, type="percent")
 
 ```
 
-  
-### this bar chart is displaying in total frequency terms our data.  Clearly there are a lot less dead people than alive people as is reflected by the sizes of the bars in the display.  
+The Bar Chart of Percent above indicates that a higher percentage of women lived that got COVID-19 in Korea and that a higher percentage of men died.  
 
 ## Numerical results
 
@@ -55,6 +60,10 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+In the cross-tab bar above we see that a higher percentage of women lived and a higher percentage of men died.  
+
+Later we see that twice as many men died than women.   
+
 ## Inferential results 
 
 ```{r}
@@ -63,6 +72,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
+The Fisher"s Exact Test Above indicates that there is a 2.3 to 1 chance of dying.  If your a female than chance of dying is 25 out of 1831 and if your male the chance of dying is 44 out of 1411.  The chances of dying are small however, the men seem to have a greater chance of dying than the women. The p-value above would indicate that the ratio is not equal to 1 @ 9e-04.  
 
 ## Conclusions
-
+ 
