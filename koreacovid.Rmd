@@ -77,6 +77,6 @@ The Fisher"s Exact Test Above indicates that there is a 2.3 to 1 chance of dying
 
 ## Conclusions
 
-Therefore we conclude that we reject the Null Hypothesis that there is no relationship between dying and the sex of the infected in favor of the Alternative, that there is a relationship between those who are dying and the infected.  We can also can conclude that dying is not independent of sex.  
+Therefore we conclude that we reject the Null Hypothesis that there is no relationship between dying and the sex of the infected in favor of the Alternative, that there is a relationship between those who are dying and the infected.  We can also conclude that dying is not independent of sex. However, data shows that men are more likely to die from COVID-19 then women.   
     
  
